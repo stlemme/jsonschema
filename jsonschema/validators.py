@@ -9,13 +9,13 @@ try:
 except ImportError:
     requests = None
 
-from jsonschema import _utils, _validators
-from jsonschema.compat import (
+from . import _utils, _validators
+from .compat import (
     Sequence, urljoin, urlsplit, urldefrag, unquote, urlopen,
     str_types, int_types, iteritems,
 )
-from jsonschema.exceptions import ErrorTree  # Backwards compatibility  # noqa
-from jsonschema.exceptions import RefResolutionError, SchemaError, UnknownType
+from .exceptions import ErrorTree  # Backwards compatibility  # noqa
+from .exceptions import RefResolutionError, SchemaError, UnknownType
 
 
 _unset = _utils.Unset()
